@@ -1,0 +1,33 @@
+<h1>Listing refactorings</h1>
+
+<table>
+  <tr>
+    <th>Body</th>
+    <th>Comment</th>
+    <th>Snippet</th>
+    <th>Language</th>
+    <th>User</th>
+    <th>Karma</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @refactorings.each do |refactoring| %>
+  <tr>
+    <td><%= refactoring.body %></td>
+    <td><%= refactoring.comment %></td>
+    <td><%= refactoring.snippet_id %></td>
+    <td><%= refactoring.language %></td>
+    <td><%= refactoring.user_id %></td>
+    <td><%= refactoring.karma %></td>
+    <td><%= link_to 'Show', snippet_refactoring_path(@snippet, refactoring) %></td>
+    <td><%= link_to 'Edit', edit_snippet_refactoring_path(@snippet, refactoring) %></td>
+    <td><%= link_to 'Destroy', snippet_refactoring_path(@snippet, refactoring), :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Refactoring', new_snippet_refactoring_path(@snippet) %>

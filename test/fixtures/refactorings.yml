@@ -1,0 +1,17 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  body: MyText
+  comment: MyText
+  snippet_id: 1
+  language: MyString
+  user_id: 1
+  karma: 1
+
+two:
+  body: MyText
+  comment: MyText
+  snippet_id: 1
+  language: MyString
+  user_id: 1
+  karma: 1

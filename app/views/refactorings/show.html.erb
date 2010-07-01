@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Body:</b>
+  <%= @refactoring.body %>
+</p>
+
+<p>
+  <b>Comment:</b>
+  <%= @refactoring.comment %>
+</p>
+
+<p>
+  <b>Snippet:</b>
+  <%= @refactoring.snippet_id %>
+</p>
+
+<p>
+  <b>Language:</b>
+  <%= @refactoring.language %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%= @refactoring.user_id %>
+</p>
+
+<p>
+  <b>Karma:</b>
+  <%= @refactoring.karma %>
+</p>
+
+
+<%= link_to 'Edit', edit_refactoring_path(@refactoring) %> |
+<%= link_to 'Back', refactorings_path %>

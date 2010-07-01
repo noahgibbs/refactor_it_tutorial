@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @snippet.title %>
+</p>
+
+<p>
+  <b>Body:</b>
+  <%= @snippet.body %>
+</p>
+
+<p>
+  <b>Notes:</b>
+  <%= @snippet.notes %>
+</p>
+
+<p>
+  <b>Language:</b>
+  <%= @snippet.language %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%= @snippet.user_id %>
+</p>
+
+<p>
+  <b>Karma:</b>
+  <%= @snippet.karma %>
+</p>
+
+
+<%= link_to 'Edit', edit_snippet_path(@snippet) %> |
+<%= link_to 'Back', snippets_path %>

@@ -1,0 +1,41 @@
+<%= form_for(@refactoring) do |f| %>
+  <% if @refactoring.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@refactoring.errors.count, "error") %> prohibited this refactoring from being saved:</h2>
+
+      <ul>
+      <% @refactoring.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :body %><br />
+    <%= f.text_area :body %>
+  </div>
+  <div class="field">
+    <%= f.label :comment %><br />
+    <%= f.text_area :comment %>
+  </div>
+  <div class="field">
+    <%= f.label :snippet_id %><br />
+    <%= f.text_field :snippet_id %>
+  </div>
+  <div class="field">
+    <%= f.label :language %><br />
+    <%= f.text_field :language %>
+  </div>
+  <div class="field">
+    <%= f.label :user_id %><br />
+    <%= f.text_field :user_id %>
+  </div>
+  <div class="field">
+    <%= f.label :karma %><br />
+    <%= f.text_field :karma %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
