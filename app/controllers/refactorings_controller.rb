@@ -26,7 +26,7 @@ class RefactoringsController < ApplicationController
   # GET /refactorings/new
   # GET /refactorings/new.xml
   def new
-    @refactoring = Refactoring.new
+    @refactoring = @snippet ? @snippet.refactorings.build : Refactoring.new
 
     respond_to do |format|
       format.html # new.html.erb
@@ -46,7 +46,7 @@ class RefactoringsController < ApplicationController
 
     respond_to do |format|
       if @refactoring.save
-        format.html { redirect_to(@refactoring, :notice => 'Refactoring was successfully created.') }
+        format.html { redirect_to(snippet_refactoring_path(@refactoring.snippet, @refactoring), :notice => 'Refactoring was successfully created.') }
         format.xml  { render :xml => @refactoring, :status => :created, :location => @refactoring }
       else
         format.html { render :action => "new" }

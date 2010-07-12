@@ -1,4 +1,4 @@
-<%= form_for([@refactoring.snippet, @refactoring]) do |f| %>
+<%= form_for [:snippet, @refactoring] do |f| %>
   <% if @refactoring.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@refactoring.errors.count, "error") %> prohibited this refactoring from being saved:</h2>
